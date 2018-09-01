@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sun-earth-api
+  cloud:
+    config:
+      uri: http://127.0.0.1:9002/
+      label: master
+      profile: dev
+server:
+  port: 9004

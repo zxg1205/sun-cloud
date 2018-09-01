@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sun-user-service
+  cloud:
+    config:
+      uri: http://127.0.0.1:9003/
+      label: master
+      profile: dev
+server:
+  port: 9004

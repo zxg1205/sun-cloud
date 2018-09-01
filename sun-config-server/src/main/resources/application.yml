@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: zoo-config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/zhouxianguang/sun-cloud.git
+          search-paths: dev
+server:
+  port: 9001
+eureka:
+  client:
+    service-url: http://127.0.0.1:9000/eureka/
