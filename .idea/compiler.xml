@@ -7,15 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sun-cloud" />
-        <module name="sun-config-server" />
         <module name="sun-earth-api" />
-        <module name="sun-eureka-server" />
+        <module name="sun-jupiter-config" />
         <module name="sun-mars-api" />
         <module name="sun-mercury-common" />
+        <module name="sun-saturn-eureka" />
         <module name="sun-user-service" />
         <module name="sun-venus-data" />
         <module name="sun-zull-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sun-config-server" target="1.8" />
+      <module name="sun-eureka-server" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
