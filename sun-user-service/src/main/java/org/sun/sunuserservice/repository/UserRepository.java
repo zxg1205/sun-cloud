@@ -13,7 +13,6 @@ import org.sun.sunvenusdata.user.entity.UserInfo;
  * @UpdateRemark: 更新说明
  * @Version: 1.0
  */
-@Repository
 public interface UserRepository extends BasicJpaRepository<UserInfo, String>
 {
 }

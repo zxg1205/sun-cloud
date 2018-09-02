@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.sun.sunmercurycommon.jpa.api.model.APIResult;
 import org.sun.sunvenusdata.user.entity.UserInfo;
 
+import java.util.List;
+
 /**
  * @Description:
  * @Author: JOHN
@@ -19,5 +21,5 @@ import org.sun.sunvenusdata.user.entity.UserInfo;
 public interface IUserClient
 {
     @RequestMapping(value = "/user/find", method = RequestMethod.GET)
-    APIResult<UserInfo> find();
+    APIResult<List<UserInfo>> find();
 }

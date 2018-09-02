@@ -5,11 +5,9 @@ import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @Description: the table of user
@@ -33,4 +31,15 @@ public class UserInfo implements Serializable
 
     @Column(name = "user_name")
     private String userName;
+
+    @Column
+    private String cellphone;
+
+    @Column(name = "gmt_created", updatable = false, insertable = false, columnDefinition = "timestamp NULL DEFAULT CURRENT_TIMESTAMP")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date gmtCreated;
+
+    @Column(name = "gmt_modified", updatable = false, insertable = false, columnDefinition = "timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date gmtModified;
 }

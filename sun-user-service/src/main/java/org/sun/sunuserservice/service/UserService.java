@@ -24,6 +24,11 @@ public class UserService
 
     public List<UserInfo> find()
     {
-        return userRepository.findAll();
+        UserInfo info =  new UserInfo();
+        info.setCellphone("18612983759");
+        info.setUserName("11");
+        info.setId("1111111111111");
+        userRepository.save(info);
+        return null;
     }
 }

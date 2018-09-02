@@ -1,6 +1,6 @@
 package org.sun.sunmercurycommon.jpa.jpa;
 
-import org.springframework.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.persistence.AttributeConverter;
 import java.util.ArrayList;
