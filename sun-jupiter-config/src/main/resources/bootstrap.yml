@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sun-jupiter-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/zhouxianguang/sun-cloud.git
+          search-paths: dev
+
+server:
+  port: 8091
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka/

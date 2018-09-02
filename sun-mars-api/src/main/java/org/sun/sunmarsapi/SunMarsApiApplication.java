@@ -12,7 +12,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class SunMarsApiApplication
 {
-
     public static void main(String[] args)
     {
         SpringApplication.run(SunMarsApiApplication.class, args);
