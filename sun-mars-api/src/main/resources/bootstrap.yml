@@ -1,10 +1,10 @@
 spring:
   application:
-    name: sun-earth-api
+    name: sun-mars-api
   cloud:
     config:
       uri: http://127.0.0.1:8091/
       label: master
       profile: dev
 server:
-  port: 8094
+  port: 8093
