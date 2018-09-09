@@ -8,3 +8,8 @@ spring:
       profile: dev
 server:
   port: 8093
+feign:
+  hystrix:
+    enabled: false
+  httpclient:
+    time-to-live: 100000

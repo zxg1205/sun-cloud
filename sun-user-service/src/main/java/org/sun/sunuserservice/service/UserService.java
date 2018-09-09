@@ -22,13 +22,41 @@ public class UserService
     @Autowired
     private UserRepository userRepository;
 
-    public List<UserInfo> find()
+    public UserInfo find(UserInfo info)
     {
-        UserInfo info =  new UserInfo();
-        info.setCellphone("18612983759");
-        info.setUserName("11");
-        info.setId("1111111111111");
-        userRepository.save(info);
+        if(info == null)
+        {
+            return null;
+        }
+
+        userRepository.findAll();
+       return null;
+    }
+
+    /**
+     * Find user info
+     * @return
+     */
+    public List<UserInfo> findAll()
+    {
+        return userRepository.findAll();
+    }
+
+    public UserInfo add(UserInfo info)
+    {
+        return userRepository.save(info);
+    }
+
+    public UserInfo update(UserInfo info)
+    {
+        ///return userRepository.;
         return null;
+    }
+
+    public int delete(UserInfo info)
+    {
+         userRepository.delete(info);
+
+         return 1;
     }
 }

@@ -1,9 +1,11 @@
 package org.sun.sunmarsapi.service;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.sun.sunmercurycommon.jpa.api.model.APIResult;
+import org.sun.sunvenusdata.user.dto.UserInfoDTO;
 import org.sun.sunvenusdata.user.entity.UserInfo;
 
 import java.util.List;
@@ -21,5 +23,11 @@ import java.util.List;
 public interface IUserClient
 {
     @RequestMapping(value = "/user/find", method = RequestMethod.GET)
-    APIResult<List<UserInfo>> find();
+    APIResult<List<UserInfoDTO>> find();
+
+    @RequestMapping(value = "/user/add", method = RequestMethod.POST)
+    APIResult<UserInfoDTO> add(@RequestBody UserInfoDTO dto);
+
+    @RequestMapping(value = "/user/delete", method = RequestMethod.POST)
+    APIResult<Integer> delete(@RequestBody UserInfoDTO dto);
 }

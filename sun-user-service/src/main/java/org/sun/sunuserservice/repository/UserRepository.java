@@ -1,7 +1,6 @@
 package org.sun.sunuserservice.repository;
 
-import org.springframework.stereotype.Repository;
-import org.sun.sunmercurycommon.jpa.jpa.BasicJpaRepository;
+import org.sun.sunmercurycommon.jpa.jpa.SunJpaRepository;
 import org.sun.sunvenusdata.user.entity.UserInfo;
 
 /**
@@ -13,6 +12,6 @@ import org.sun.sunvenusdata.user.entity.UserInfo;
  * @UpdateRemark: 更新说明
  * @Version: 1.0
  */
-public interface UserRepository extends BasicJpaRepository<UserInfo, String>
+public interface UserRepository extends SunJpaRepository<UserInfo, String>
 {
 }

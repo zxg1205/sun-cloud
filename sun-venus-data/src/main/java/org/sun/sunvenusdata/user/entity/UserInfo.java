@@ -26,6 +26,8 @@ import java.util.Date;
 @ToString
 public class UserInfo implements Serializable
 {
+    private static final long serialVersionUID = 1L;
+
     @Id
     private String id;
 
@@ -34,6 +36,12 @@ public class UserInfo implements Serializable
 
     @Column
     private String cellphone;
+
+    @Column
+    private String email;
+
+    @Column
+    private String birthday;
 
     @Column(name = "gmt_created", updatable = false, insertable = false, columnDefinition = "timestamp NULL DEFAULT CURRENT_TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)

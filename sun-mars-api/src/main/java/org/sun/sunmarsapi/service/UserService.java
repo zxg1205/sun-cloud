@@ -3,9 +3,9 @@ package org.sun.sunmarsapi.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.sun.sunmercurycommon.jpa.api.model.APIResult;
+import org.sun.sunvenusdata.user.dto.UserInfoDTO;
 import org.sun.sunvenusdata.user.entity.UserInfo;
 
-import javax.validation.constraints.Max;
 import java.util.List;
 
 /**
@@ -23,8 +23,18 @@ public class UserService
     @Autowired
     private  IUserClient userClient;
 
-    public APIResult<List<UserInfo>> findAll()
+    public APIResult<List<UserInfoDTO>> findAll()
     {
         return userClient.find();
+    }
+
+    public APIResult<UserInfoDTO> add(UserInfoDTO dto)
+    {
+        return userClient.add(dto);
+    }
+
+    public APIResult<Integer> delete(UserInfoDTO dto)
+    {
+        return userClient.delete(dto);
     }
 }
